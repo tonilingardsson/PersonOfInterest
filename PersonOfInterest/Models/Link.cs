@@ -1,6 +1,6 @@
 ﻿using PersonOfInterest.Models;
 
-namespace PeopleInterests.Models
+namespace PersonOfInterest.Models
 {
     public class Link
     {

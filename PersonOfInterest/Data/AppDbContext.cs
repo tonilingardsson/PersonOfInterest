@@ -25,12 +25,12 @@ namespace PersonOfInterest.Data
 
             modelBuilder.Entity<PersonInterest>()
                 .HasOne(pi => pi.Person)
-                .WithMany(pi => pi.PersonInterests)
+                .WithMany(p => p.PersonInterests)
                 .HasForeignKey(pi => pi.PersonId);
 
             modelBuilder.Entity<PersonInterest>()
                 .HasOne(pi => pi.Interest)
-                .WithMany(in => i.PersonInterests)
+                .WithMany(i => i.PersonInterests)
                 .HasForeignKey(pi => pi.InterestId);
 
             // Seed data for testing purposes
@@ -58,10 +58,10 @@ namespace PersonOfInterest.Data
                 );
 
             modelBuilder.Entity<Link>().HasData(
-                new Link { Id = 1, FormUrlEncodedContent = "https://spotify.com", PersonId = 1, InterestId = 1 },
-                new Link { Id = 2, FormUrlEncodedContent = "https://github.com", PersonId = 1, InterestId = 2 },
-                new Link { Id = 3, FormUrlEncodedContent = "https://bokus.se", PersonId = 1, InterestId = 3 },
-                new Link { Id = 3, FormUrlEncodedContent = "https://bokus.se", PersonId = 2, InterestId = 3 }               
+                new Link { Id = 1, Url = "https://spotify.com", PersonId = 1, InterestId = 1 },
+                new Link { Id = 2, Url = "https://github.com", PersonId = 1, InterestId = 2 },
+                new Link { Id = 3, Url = "https://bokus.se", PersonId = 1, InterestId = 3 },
+                new Link { Id = 4, Url = "https://bokus.se", PersonId = 2, InterestId = 3 }               
                 );
         }
     }
