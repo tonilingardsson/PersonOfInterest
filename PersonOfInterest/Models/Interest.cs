@@ -1,4 +1,6 @@
-﻿namespace PersonOfInterest.Models
+﻿using PersonOfInterest.Models;
+
+namespace PersonOfInterest.Models
 {
     public class Interest
     {
